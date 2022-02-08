@@ -46,7 +46,7 @@ body {
     color: #616161;
 }
 
-
+/* Селектор атрибута для любого элемента container */
 [class*='__container'] {
     max-width: 1087px;
     margin: 0 auto;
@@ -76,6 +76,8 @@ body {
 
 /* Mobile  Small*/
 @media (max-width: 479.98px) {}
+
+
 
 .wrapper {
     overflow: hidden;
@@ -763,8 +765,6 @@ body {
     padding: 80px 0 30px 0;
 }
 
-.healthcare__container {}
-
 .healthcare__text-block {
     margin: 0 0 45px 0;
 }
@@ -779,9 +779,9 @@ body {
     float: 0 1 33.333%;
 }
 
-.healthcare__item {}
 
 .item_healthcare {
+    height: 100%;
     position: relative;
     z-index: 2;
     background: #FFFFFF;
@@ -858,4 +858,51 @@ body {
     right: 10px;
     border-radius: 16px;
     transform: rotate(45deg);
+}
+
+@media (max-width: 1087px) {
+    .healthcare__column {
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .healthcare {
+        padding: 30px 0 30px 0;
+    }
+
+    .healthcare__items {
+        flex-direction: column;
+    }
+
+    .healthcare__column:not(:last-child) {
+        margin: 0 0 25px 0;
+    }
+}
+
+/* Footer */
+
+.footer {
+    padding: 45px 0;
+}
+
+
+.footer__items {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer__items {
+        flex-direction: column;
+
+    }
 }
